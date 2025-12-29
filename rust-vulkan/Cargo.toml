@@ -1,0 +1,13 @@
+[package]
+name = "vulkan-triangle-rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+vulkano = "0.34"
+vulkano-shaders = "0.34"
+winit = "0.29"
+bytemuck = "1.14"
+
+[build-dependencies]
+vulkano-shaders = "0.34"

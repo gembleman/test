@@ -4,6 +4,26 @@
 
 A simple Vulkan application that renders a colored triangle on the screen.
 
+## 🎯 두 가지 구현 버전 / Two Implementation Versions
+
+이 저장소는 같은 Vulkan 프로그램을 두 가지 언어로 제공합니다:
+
+This repository provides the same Vulkan program in two languages:
+
+- **C++ 버전** - 전통적인 Vulkan API 사용 (루트 디렉토리)
+- **Rust 버전** - Vulkano 라이브러리 사용 (`rust-vulkan/` 디렉토리)
+
+| 특징 | C++ | Rust |
+|------|-----|------|
+| 코드 라인 수 | ~1000줄 | ~400줄 |
+| 메모리 안전성 | 수동 관리 | 자동 보장 |
+| 학습 곡선 | Vulkan API 직접 학습 | Rust + Vulkano 학습 |
+| 권장 대상 | Vulkan API 상세 이해 | 빠른 프로토타이핑 |
+
+---
+
+# C++ 버전 (루트 디렉토리)
+
 ## 📋 요구사항 / Requirements
 
 ### 필수 / Required
@@ -174,3 +194,56 @@ After understanding this program, you can learn:
 이 프로젝트는 교육 목적으로 자유롭게 사용할 수 있습니다.
 
 This project is free to use for educational purposes.
+
+---
+
+# 🦀 Rust 버전 (`rust-vulkan/` 디렉토리)
+
+Rust로 같은 삼각형 프로그램을 구현했습니다. Vulkano 라이브러리를 사용하여 더 안전하고 간결한 코드를 제공합니다.
+
+The same triangle program implemented in Rust using the Vulkano library for safer and more concise code.
+
+## 빠른 시작 / Quick Start
+
+```bash
+cd rust-vulkan
+cargo run
+```
+
+## 주요 차이점 / Key Differences
+
+### C++ 버전의 장점
+- Vulkan API를 직접 다루며 상세하게 학습
+- 업계 표준 접근 방식
+- 더 많은 튜토리얼과 자료
+
+### Rust 버전의 장점
+- 메모리 안전성 보장 (런타임 크래시 감소)
+- 타입 안전한 API (잘못된 Vulkan 사용 방지)
+- 짧고 읽기 쉬운 코드 (~60% 코드 감소)
+- 셰이더가 코드에 인라인으로 포함 (별도 컴파일 불필요)
+- Cargo로 간편한 의존성 관리
+- 자동 리소스 정리 (Drop trait)
+
+## 상세 문서 / Detailed Documentation
+
+Rust 버전의 상세한 설명은 [`rust-vulkan/README.md`](rust-vulkan/README.md)를 참조하세요.
+
+For detailed information about the Rust version, see [`rust-vulkan/README.md`](rust-vulkan/README.md).
+
+## 어떤 버전을 선택해야 할까요? / Which Version Should You Choose?
+
+**C++ 버전을 선택하세요:**
+- Vulkan API를 깊이 이해하고 싶은 경우
+- 게임 엔진이나 그래픽스 직종 준비
+- C++로 작성된 기존 코드베이스와 통합
+
+**Rust 버전을 선택하세요:**
+- 빠르게 프로토타입을 만들고 싶은 경우
+- 메모리 안전성이 중요한 프로젝트
+- 현대적이고 안전한 시스템 프로그래밍에 관심
+- Rust 생태계 학습
+
+**둘 다 학습하세요:**
+- 두 구현을 비교하며 Vulkan 개념 이해
+- 각 언어의 장단점 체험
