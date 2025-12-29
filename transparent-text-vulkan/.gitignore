@@ -1,0 +1,15 @@
+# Rust
+target/
+Cargo.lock
+
+# 폰트 파일 (사용자가 직접 다운로드)
+*.ttf
+*.otf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# System
+.DS_Store

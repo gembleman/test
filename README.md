@@ -1,17 +1,14 @@
-# Vulkan 삼각형 프로그램 / Vulkan Triangle Program
+# Vulkan 프로그래밍 예제 모음
 
+Vulkan을 사용한 다양한 그래픽스 프로그램 예제입니다.
+
+## 📂 프로젝트 목록
+
+### 1. 🔺 기본 삼각형 렌더링
 간단한 Vulkan 애플리케이션으로 화면에 색상이 있는 삼각형을 렌더링합니다.
 
-A simple Vulkan application that renders a colored triangle on the screen.
-
-## 🎯 두 가지 구현 버전 / Two Implementation Versions
-
-이 저장소는 같은 Vulkan 프로그램을 두 가지 언어로 제공합니다:
-
-This repository provides the same Vulkan program in two languages:
-
 - **C++ 버전** - 전통적인 Vulkan API 사용 (루트 디렉토리)
-- **Rust 버전** - Vulkano 라이브러리 사용 (`rust-vulkan/` 디렉토리)
+- **Rust 버전** - Vulkano 라이브러리 사용 (`rust-vulkan/`)
 
 | 특징 | C++ | Rust |
 |------|-----|------|
@@ -20,9 +17,50 @@ This repository provides the same Vulkan program in two languages:
 | 학습 곡선 | Vulkan API 직접 학습 | Rust + Vulkano 학습 |
 | 권장 대상 | Vulkan API 상세 이해 | 빠른 프로토타이핑 |
 
+### 2. 💎 투명 텍스트 렌더러 ⭐ NEW!
+GPU 가속 투명 창 텍스트 렌더링 프로그램입니다. (`transparent-text-vulkan/`)
+
+**주요 기능:**
+- ✅ 투명한 윈도우 (배경 투과)
+- ✅ GPU 가속 텍스트 렌더링
+- ✅ 다양한 텍스트 효과 (외곽선, 그림자, 발광)
+- ✅ 실시간 투명도 조절 (10% ~ 100%)
+- ✅ 키보드 컨트롤
+
+**빠른 시작:**
+```bash
+cd transparent-text-vulkan
+./download_font.sh  # 폰트 다운로드
+cargo run           # 실행
+```
+
+**활용 사례:**
+- 데스크톱 위젯 (시계, 날씨, 모니터)
+- 게임 오버레이 (FPS 카운터, 정보 표시)
+- 자막 프로그램
+- 커스텀 알림 시스템
+
+[상세 문서 →](transparent-text-vulkan/README.md)
+
 ---
 
-# C++ 버전 (루트 디렉토리)
+## 🎯 프로젝트 비교
+
+| 특징 | 삼각형 (C++) | 삼각형 (Rust) | 투명 텍스트 (Rust) |
+|------|-------------|--------------|------------------|
+| 난이도 | 입문 | 입문 | 중급 |
+| Vulkan 기능 | 기본 | 기본 | 고급 |
+| 실용성 | 학습용 | 학습용 | 실전 활용 가능 |
+| 투명도 | ❌ | ❌ | ✅ |
+| 텍스트 렌더링 | ❌ | ❌ | ✅ |
+| 효과 | ❌ | ❌ | ✅ (4가지) |
+| 사용자 입력 | ❌ | ❌ | ✅ (키보드) |
+
+---
+
+# 🔺 기본 삼각형 프로그램
+
+## C++ 버전 (루트 디렉토리)
 
 ## 📋 요구사항 / Requirements
 
